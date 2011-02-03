@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ville:</b>
+  <%= @appartment.city %>
+</p>
+
+<p>
+  <b>Prix:</b>
+  <%= @appartment.price %>
+</p>
+
+<p>
+  <b>m²:</b>
+  <%= @appartment.square_meters %>
+</p>
+
+<p>
+  <b>Taxe fonciere:</b>
+  <%= @appartment.tax %>
+</p>
+
+<p>
+  <b>Charges:</b>
+  <%= @appartment.charges %>
+</p>
+
+<p>
+  <b>Classe ecologique:</b>
+  <%= @appartment.ecoclass %>
+</p>
+
+<p>
+  <b>Situation geographique:</b>
+  <%= @appartment.geographic_location %>
+</p>
+
+<p>
+  <b>Cuisine:</b>
+  <%= @appartment.kitchen %>
+</p>
+
+<p>
+  <b>Etat:</b>
+  <%= @appartment.condition %>
+</p>
+
+<p>
+  <b>Quartier:</b>
+  <%= @appartment.area %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @appartment.contact %>
+</p>
+
+<p>
+  <b>Visite:</b>
+  <%= @appartment.seen %>
+</p>
+
+<p>
+  <b>Lien:</b>
+  <%= link_to @appartment.link, @appartment.link %>
+</p>
+
+
+<%= link_to 'Modifier', edit_appartment_path(@appartment) %> |
+<%= link_to 'Retour', appartments_path %>

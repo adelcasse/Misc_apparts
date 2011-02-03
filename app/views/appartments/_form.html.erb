@@ -1,0 +1,73 @@
+<%= form_for(@appartment) do |f| %>
+  <% if @appartment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appartment.errors.count, "error") %> prohibited this appartment from being saved:</h2>
+
+      <ul>
+      <% @appartment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :square_meters %><br />
+    <%= f.text_field :square_meters %>
+  </div>
+  <div class="field">
+    <%= f.label :tax %><br />
+    <%= f.text_field :tax %>
+  </div>
+  <div class="field">
+    <%= f.label :charges %><br />
+    <%= f.text_field :charges %>
+  </div>
+  <div class="field">
+    <%= f.label :ecoclass %><br />
+    <%= f.text_field :ecoclass %>
+  </div>
+  <div class="field">
+    <%= f.label :geographic_location %><br />
+    <%= f.text_area :geographic_location %>
+  </div>
+  <div class="field">
+    <%= f.label :kitchen %><br />
+    <%= f.text_area :kitchen %>
+  </div>
+  <div class="field">
+    <%= f.label :condition %><br />
+    <%= f.text_area :condition %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_area :area %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_area :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :seen %><br />
+    <%= f.text_area :seen %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

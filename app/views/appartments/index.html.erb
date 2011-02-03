@@ -1,0 +1,56 @@
+<h1>Listing appartements</h1>
+<%= link_to 'Ajouter un appartement', new_appartment_path %>
+
+<table width="2048">
+  <tr>
+    <th>Note</th>
+    <th>Ville</th>
+    <th>Prix</th>
+    <th>m²</th>
+    <th>prix/m²</th>
+    <th>Prix avec notaire</th>
+    <th>Taxe fonciere</th>
+    <th>Charges</th>
+    <th>Classe ecologique</th>
+    <th>Situation geographique</th>
+    <th>Cuisine</th>
+    <th>Etat</th>
+    <th>Quartier</th>
+    <th>Contact</th>
+    <th>Visite</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appartments.each do |appartment| %>
+  <tr<% if appartment.like==true then %> bgcolor="#A9EAFF"<% end %>>
+    <td><%= appartment.note %></td>
+    <td><%= appartment.city %></td>
+    <td><%= appartment.price %></td>
+    <td><%= appartment.square_meters %></td>
+    <td><%= (appartment.price.to_i/appartment.square_meters.to_i).to_s if appartment.square_meters.to_i > 0 %></td>
+    <td><%= (appartment.price+appartment.price*0.1).to_i %></td>
+    <td><%= appartment.tax %></td>
+    <td><%= appartment.charges %></td>
+    <td><%= appartment.ecoclass %></td>
+    <td><%= appartment.geographic_location %></td>
+    <td><%= appartment.kitchen %></td>
+    <td><%= appartment.condition %></td>
+    <td><%= appartment.area %></td>
+    <td><%= appartment.contact %></td>
+    <td><%= appartment.seen %></td>
+    <td><%= link_to 'Like / Unlike', :action => 'like', :id => appartment %></td>
+    <td><%= link_to 'Lien', appartment.link %></td>
+    <td><%= link_to 'Voir', appartment %></td>
+    <td><%= link_to 'Modifier', edit_appartment_path(appartment) %></td>
+    <td><%= link_to 'Supprimer', appartment, :confirm => 'Etes vous sur?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Ajouter un appartement', new_appartment_path %>

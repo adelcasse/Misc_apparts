@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  city: MyString
+  price: 1
+  square_meters: 1
+  tax: 1
+  charges: 1
+  ecoclass: MyString
+  geographic_location: MyText
+  kitchen: MyText
+  condition: MyText
+  area: MyText
+  contact: MyText
+  seen: MyText
+  link: MyString
+
+two:
+  city: MyString
+  price: 1
+  square_meters: 1
+  tax: 1
+  charges: 1
+  ecoclass: MyString
+  geographic_location: MyText
+  kitchen: MyText
+  condition: MyText
+  area: MyText
+  contact: MyText
+  seen: MyText
+  link: MyString
